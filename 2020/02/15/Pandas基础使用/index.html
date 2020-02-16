@@ -6,15 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Pandas基础使用 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1.安装 2.pandas获取csv\Excel的第一行（列标签） 3.获取excel的最大行和最大列 4.显示列名及对应序号 5.打印指定单元格 6.根据列名查看列的内容 7.根据列的序号查看指定列内容 8.查看固定行的内容 9.遍历整个表格 10.读取excel时带列名读取 11.操作excel插入列 11.1 插入行列操作 11.2 插入时左边多一列的问题 11.3设置列宽 11.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pandas基础使用">
+<meta property="og:url" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.安装 2.pandas获取csv\Excel的第一行（列标签） 3.获取excel的最大行和最大列 4.显示列名及对应序号 5.打印指定单元格 6.根据列名查看列的内容 7.根据列的序号查看指定列内容 8.查看固定行的内容 9.遍历整个表格 10.读取excel时带列名读取 11.操作excel插入列 11.1 插入行列操作 11.2 插入时左边多一列的问题 11.3设置列宽 11.">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/1C4585815AB14373B3B97CB11FAFC2C7">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/4AA58F982DA348FAA4D1E323D800732F">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/CC19CF513A0D4673ABBDAA1E2038A5F9">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/095D5A4B7E0F4484A28B3A97F3D707CE">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/482C157BF6254D03B5C20817EE2EECF8">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/6B542D80AF324DE3AC9AAB0A5473257B">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/976CFFFF1A494C8BA6F0D4CE68A19B94">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/DFAFFC7EC62843159D17BAB68E2DE044">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/6D4569B051094B6DAF09623018E196DA">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/BBE51733BDC04E65BDDC421AE3ACF420">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/C1101BA003A24196A2733195C74D2932">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/F99ECDFCBCD54EFCA99D22F645B87E8E">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/1584F3D1E0534424815682EEB45CAC97">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/2B0BBD5F71594E73B714FC09070CAA97">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/4DD67888E2E3402CADED2AFA0AE1761B">
+<meta property="og:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/46F2BCCE4AF84882BBC42681B673A797">
+<meta property="article:published_time" content="2020-02-15T14:35:26.195Z">
+<meta property="article:modified_time" content="2020-02-16T02:40:51.177Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/1C4585815AB14373B3B97CB11FAFC2C7">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,157 +171,267 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Pandas基础使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/16/Python%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="archive-article-date">
-  	<time datetime="2020-02-16T02:42:48.123Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/16/Python%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">Python基础入门</a>
+    <h1 class="article-title" itemprop="name">
+      Pandas基础使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/16/SpringCloud%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2020-02-16T02:42:47.531Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/16/SpringCloud%E5%9F%BA%E7%A1%80/">SpringCloud基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/16/Spring%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2020-02-16T02:42:46.912Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/16/Spring%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">Spring源码解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/16/Nginx%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2020-02-16T02:42:46.255Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/16/Nginx%E5%9F%BA%E7%A1%80/">Nginx基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+        
+        <a href="/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" class="archive-article-date">
   	<time datetime="2020-02-15T14:35:26.195Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-15</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">Pandas基础使用</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="toc">
 
-        <div class="article-info info-on-right">
-          
-          
+<!-- toc -->
 
+<ul>
+<li><a href="#1-an-zhuang">1.安装</a></li>
+<li><a href="#2-pandas-huo-qu-csv-excel-de-di-yi-xing-lie-biao-qian">2.pandas获取csv\Excel的第一行（列标签）</a></li>
+<li><a href="#3-huo-qu-excel-de-zui-da-xing-he-zui-da-lie">3.获取excel的最大行和最大列</a></li>
+<li><a href="#4-xian-shi-lie-ming-ji-dui-ying-xu-hao">4.显示列名及对应序号</a></li>
+<li><a href="#5-da-yin-zhi-ding-dan-yuan-ge">5.打印指定单元格</a></li>
+<li><a href="#6-gen-ju-lie-ming-cha-kan-lie-de-nei-rong">6.根据列名查看列的内容</a></li>
+<li><a href="#7-gen-ju-lie-de-xu-hao-cha-kan-zhi-ding-lie-nei-rong">7.根据列的序号查看指定列内容</a></li>
+<li><a href="#8-cha-kan-gu-ding-xing-de-nei-rong">8.查看固定行的内容</a></li>
+<li><a href="#9-bian-li-zheng-ge-biao-ge">9.遍历整个表格</a></li>
+<li><a href="#10-du-qu-excel-shi-dai-lie-ming-du-qu">10.读取excel时带列名读取</a></li>
+<li><a href="#11-cao-zuo-excel-cha-ru-lie">11.操作excel插入列</a><ul>
+<li><a href="#11-1-cha-ru-xing-lie-cao-zuo">11.1 插入行列操作</a></li>
+<li><a href="#11-2-cha-ru-shi-zuo-bian-duo-yi-lie-de-wen-ti">11.2 插入时左边多一列的问题</a></li>
+<li><a href="#11-3-she-zhi-lie-kuan">11.3设置列宽</a><ul>
+<li><a href="#11-3-1-shi-ji-shi-yong-de-yi-ge-cheng-xu-li-zi">11.3.1 实际使用的一个程序例子</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+</div>
+# 1.安装
+pandas处理excel需要xlrd、openpyxl依赖包
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install pandas</span><br><span class="line">pip install xlrd</span><br><span class="line">pip install openpyxl</span><br></pre></td></tr></table></figure>
+
+<h1><span id="2-pandas-huo-qu-csv-excel-de-di-yi-xing-lie-biao-qian">2.pandas获取csv\Excel的第一行（列标签）</span><a href="#2-pandas-huo-qu-csv-excel-de-di-yi-xing-lie-biao-qian" class="header-anchor">#</a></h1><p>一般来说excel第一行是列标签，平时读取第一行也是从数据行来读取的，那么如何读取第一行列标签呢  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import pandas as pd</span><br><span class="line">&gt;&gt;&gt; path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line">&gt;&gt;&gt; data&#x3D;pd.read_excel(path)</span><br><span class="line">&gt;&gt;&gt; list(data.columns.values)</span><br></pre></td></tr></table></figure>
+<p>这样就能拿到所有的列标签</p>
+<h1><span id="3-huo-qu-excel-de-zui-da-xing-he-zui-da-lie">3.获取excel的最大行和最大列</span><a href="#3-huo-qu-excel-de-zui-da-xing-he-zui-da-lie" class="header-anchor">#</a></h1><p>==注意：这里获取到的行是不包括第一行（标签名）==<br><img src="1C4585815AB14373B3B97CB11FAFC2C7" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import pandas as pd</span><br><span class="line">&gt;&gt;&gt; path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line">&gt;&gt;&gt; data&#x3D;pd.read_excel(path)</span><br><span class="line">#获取最大行，不包括标签</span><br><span class="line">&gt;&gt;&gt; nrows&#x3D;data.shape[0]</span><br><span class="line">5  </span><br><span class="line">#获取最大列</span><br><span class="line">&gt;&gt;&gt; ncols&#x3D;data.columns.size</span><br><span class="line">100</span><br><span class="line"></span><br><span class="line">print(&#39;Max Rows:&#39;+str(nrows))</span><br><span class="line">print(&#39;Max Columns&#39;+str(ncols))</span><br></pre></td></tr></table></figure>
+
+<h1><span id="4-xian-shi-lie-ming-ji-dui-ying-xu-hao">4.显示列名及对应序号</span><a href="#4-xian-shi-lie-ming-ji-dui-ying-xu-hao" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line"></span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line"></span><br><span class="line">data&#x3D;pd.read_excel(path)</span><br><span class="line">nrows&#x3D;data.shape[0]</span><br><span class="line">ncols&#x3D;data.columns.size</span><br><span class="line"></span><br><span class="line">#显示列名，并显示列名序号</span><br><span class="line">for iCol in range(ncols):</span><br><span class="line">    print(str(iCol)+&quot;:&quot;+data.columns[iCol])</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0:Chr</span><br><span class="line">1:Start</span><br><span class="line">2:Stop</span><br><span class="line">3:Ref</span><br><span class="line">4:Call</span><br><span class="line">5:MapLoc</span><br></pre></td></tr></table></figure>
+
+<h1><span id="5-da-yin-zhi-ding-dan-yuan-ge">5.打印指定单元格</span><a href="#5-da-yin-zhi-ding-dan-yuan-ge" class="header-anchor">#</a></h1><p><img src="4AA58F982DA348FAA4D1E323D800732F" alt="image"><br>打印第二行，第四列  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line"></span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line"></span><br><span class="line">data&#x3D;pd.read_excel(path)</span><br><span class="line">nrows&#x3D;data.shape[0]</span><br><span class="line">ncols&#x3D;data.columns.size</span><br><span class="line"></span><br><span class="line">#打印指定单元格</span><br><span class="line">print(data.iloc[0,3])</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C  #打印正确</span><br></pre></td></tr></table></figure>
+
+<h1><span id="6-gen-ju-lie-ming-cha-kan-lie-de-nei-rong">6.根据列名查看列的内容</span><a href="#6-gen-ju-lie-ming-cha-kan-lie-de-nei-rong" class="header-anchor">#</a></h1><p><img src="CC19CF513A0D4673ABBDAA1E2038A5F9" alt="image">  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line"></span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line">data&#x3D;pd.read_excel(path)</span><br><span class="line">#查看指定列的内容</span><br><span class="line">print(data[&#39;Ref&#39;])</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0    C</span><br><span class="line">1    T</span><br><span class="line">2    G</span><br><span class="line">3    G</span><br><span class="line">4    G</span><br><span class="line">Name: Ref, dtype: object</span><br></pre></td></tr></table></figure>
+
+<h1><span id="7-gen-ju-lie-de-xu-hao-cha-kan-zhi-ding-lie-nei-rong">7.根据列的序号查看指定列内容</span><a href="#7-gen-ju-lie-de-xu-hao-cha-kan-zhi-ding-lie-nei-rong" class="header-anchor">#</a></h1><p><img src="095D5A4B7E0F4484A28B3A97F3D707CE" alt="image"><br><strong>方法一</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line">data&#x3D;pd.read_excel(path)</span><br><span class="line">#根据列的序号查看指定列:第四列的内容</span><br><span class="line">sColumnName&#x3D;data.columns[3]</span><br><span class="line">print(data[sColumnName])</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0    C</span><br><span class="line">1    T</span><br><span class="line">2    G</span><br><span class="line">3    G</span><br><span class="line">4    G</span><br><span class="line">Name: Ref, dtype: object</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法二</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line">data&#x3D;pd.read_excel(path,sheet_name&#x3D;&quot;SmallVariations&quot;)</span><br><span class="line">#查看某一列的值</span><br><span class="line">print(data[&#39;Ref&#39;].values)</span><br></pre></td></tr></table></figure>
+<p>这种方法更为简便，注意读取excel时如果要用这种方法，就不能添加header=None,不然会报错，运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#39;C&#39; &#39;T&#39; &#39;G&#39; &#39;G&#39; &#39;G&#39;]</span><br></pre></td></tr></table></figure>
+
+<h1><span id="8-cha-kan-gu-ding-xing-de-nei-rong">8.查看固定行的内容</span><a href="#8-cha-kan-gu-ding-xing-de-nei-rong" class="header-anchor">#</a></h1><p><img src="482C157BF6254D03B5C20817EE2EECF8" alt="image"><br><strong>方法一</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line">data&#x3D;pd.read_excel(path)</span><br><span class="line">nrows&#x3D;data.shape[0]</span><br><span class="line">ncols&#x3D;data.columns.size</span><br><span class="line">#查看某行的内容(第四行，行从0开始)</span><br><span class="line">iRow&#x3D;3</span><br><span class="line">for iCol in range(ncols):</span><br><span class="line">    print(data.iloc[iRow,iCol])</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">11190610</span><br><span class="line">11190611</span><br><span class="line">G</span><br><span class="line">A</span><br><span class="line">1p36.22</span><br><span class="line">snv</span><br><span class="line">SomMajor</span><br><span class="line">NDPLow</span><br><span class="line">...</span><br><span class="line">..</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法二</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line">data&#x3D;pd.read_excel(path,sheet_name&#x3D;&quot;SmallVariations&quot;,header&#x3D;None)</span><br><span class="line"># 查看第一行</span><br><span class="line">print(data.values[0])</span><br></pre></td></tr></table></figure>
+<p>这种方法更为简便，运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[&#39;Chr&#39; &#39;Start&#39; &#39;Stop&#39; &#39;Ref&#39; &#39;Call&#39; &#39;MapLoc&#39; &#39;VarType&#39; &#39;VarTag&#39;</span><br><span class="line"> &#39;siteFilter&#39; &#39;SomConfLev&#39; &#39;SomNotes&#39; &#39;caseRsAD&#39; &#39;caseAD&#39; &#39;caseAF&#39;</span><br><span class="line"> &#39;caseDP&#39;..]</span><br></pre></td></tr></table></figure>
+
+<h1><span id="9-bian-li-zheng-ge-biao-ge">9.遍历整个表格</span><a href="#9-bian-li-zheng-ge-biao-ge" class="header-anchor">#</a></h1><p><strong>方法一</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line">data&#x3D;pd.read_excel(path)</span><br><span class="line">nrows&#x3D;data.shape[0]</span><br><span class="line">ncols&#x3D;data.columns.size</span><br><span class="line">#遍历整个表格</span><br><span class="line">for iRow in range(nrows):</span><br><span class="line">    for iCol in range(ncols):</span><br><span class="line">        print(data.iloc[iRow,iCol])</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法二</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line">data&#x3D;pd.read_excel(path,sheet_name&#x3D;&quot;SmallVariations&quot;,header&#x3D;None)</span><br><span class="line"># 查看所有的值</span><br><span class="line">print(data.values)</span><br></pre></td></tr></table></figure>
+<p>这种方法更为直观、简便，运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[[&#39;Chr&#39; &#39;Start&#39; &#39;Stop&#39; &#39;Ref&#39; &#39;Call&#39; &#39;MapLoc&#39; &#39;VarType&#39; &#39;VarTag&#39;</span><br><span class="line">  &#39;siteFilter&#39; &#39;SomConfLev&#39; &#39;SomNotes&#39; &#39;caseRsAD&#39; &#39;caseAD&#39; &#39;caseAF&#39;</span><br><span class="line">  &#39;caseDP&#39; ..]]</span><br></pre></td></tr></table></figure>
+
+<h1><span id="10-du-qu-excel-shi-dai-lie-ming-du-qu">10.读取excel时带列名读取</span><a href="#10-du-qu-excel-shi-dai-lie-ming-du-qu" class="header-anchor">#</a></h1><p>读取时增加参数：header=None</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test.xlsx&quot;</span><br><span class="line">data&#x3D;pd.read_excel(path,sheet_name&#x3D;&quot;SmallVariations&quot;,header&#x3D;None)</span><br><span class="line">nrows&#x3D;data.shape[0]</span><br><span class="line">ncols&#x3D;data.columns.size</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Max Rows:6   &#x2F;&#x2F;比上面的读取多了一行</span><br><span class="line">Max Columns:100</span><br></pre></td></tr></table></figure>
+
+<h1><span id="11-cao-zuo-excel-cha-ru-lie">11.操作excel插入列</span><a href="#11-cao-zuo-excel-cha-ru-lie" class="header-anchor">#</a></h1><p><img src="6B542D80AF324DE3AC9AAB0A5473257B" alt="image">  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test2.xlsx&quot;</span><br><span class="line">data&#x3D;pd.read_excel(path,sheet_name&#x3D;&quot;shtt1&quot;)</span><br><span class="line"></span><br><span class="line"># 新增列</span><br><span class="line">tmp&#x3D;data[&#39;Stop&#39;].values</span><br><span class="line">data.insert(6,&#39;Stop2&#39;,tmp)</span><br><span class="line">pd.DataFrame(data).to_excel(&quot;I:\\download\\临时\\test2.xlsx&quot;,sheet_name&#x3D;&quot;shtt1&quot;,index&#x3D;False,header&#x3D;True)</span><br></pre></td></tr></table></figure>
+
+<p>操作结果：<br><img src="976CFFFF1A494C8BA6F0D4CE68A19B94" alt="image"></p>
+<h2><span id="11-1-cha-ru-xing-lie-cao-zuo">11.1 插入行列操作</span><a href="#11-1-cha-ru-xing-lie-cao-zuo" class="header-anchor">#</a></h2><p><img src="DFAFFC7EC62843159D17BAB68E2DE044" alt="image">  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">path&#x3D;&quot;I:\\download\\临时\\test2.xlsx&quot;</span><br><span class="line">data&#x3D;pd.read_excel(path,sheet_name&#x3D;&quot;sheet1&quot;)</span><br><span class="line">newrow&#x3D;[&#39;孙悟空&#39;,&#39;沙僧&#39;,&#39;八戒&#39;,&#39;小白龙&#39;]</span><br><span class="line">#增加行数据，在第6行增加</span><br><span class="line">data.loc[6]&#x3D;newrow</span><br><span class="line"></span><br><span class="line">#增加列，给定默认值None</span><br><span class="line">data[&#39;成绩&#39;]&#x3D;None</span><br><span class="line"></span><br><span class="line">#列变动后再插入行</span><br><span class="line">newrow2&#x3D;[&#39;孙悟空&#39;,&#39;沙僧&#39;,&#39;八戒&#39;,&#39;小白龙&#39;,&#39;90&#39;]</span><br><span class="line">data.loc[7]&#x3D;newrow2</span><br><span class="line">pd.DataFrame(data).to_excel(&quot;I:\\download\\临时\\test2.xlsx&quot;,sheet_name&#x3D;&quot;sheet1&quot;,index&#x3D;False,header&#x3D;True)</span><br></pre></td></tr></table></figure>
+<p>执行结果：<br><img src="6D4569B051094B6DAF09623018E196DA" alt="image"></p>
+<h2><span id="11-2-cha-ru-shi-zuo-bian-duo-yi-lie-de-wen-ti">11.2 插入时左边多一列的问题</span><a href="#11-2-cha-ru-shi-zuo-bian-duo-yi-lie-de-wen-ti" class="header-anchor">#</a></h2><p><img src="BBE51733BDC04E65BDDC421AE3ACF420" alt="image"><br>使用如下代码编辑后，结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data &#x3D; pd.read_excel(path)</span><br><span class="line">pd.DataFrame(data).to_excel(path, sheet_name&#x3D;&quot;Sheet1&quot;, header&#x3D;True)</span><br></pre></td></tr></table></figure>
+<p>执行结果后结果如下：<br><img src="C1101BA003A24196A2733195C74D2932" alt="image"><br>解决方法：<br>在进行to_excel操作的时候加上参数<strong>index=False</strong>，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">pd.DataFrame(data).to_excel(path, sheet_name&#x3D;&quot;Sheet1&quot;,index&#x3D;False, header&#x3D;True)</span><br></pre></td></tr></table></figure>
+<p><img src="F99ECDFCBCD54EFCA99D22F645B87E8E" alt="image">   </p>
+<h2><span id="11-3-she-zhi-lie-kuan">11.3设置列宽</span><a href="#11-3-she-zhi-lie-kuan" class="header-anchor">#</a></h2><p>原始的表格如果列宽不够的话，会隐藏显示，如下图：<br><img src="1584F3D1E0534424815682EEB45CAC97" alt="image"><br>那么如何设置列宽度呢，参见如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#创建一个空的Excel</span><br><span class="line">path&#x3D;&quot;I:\\download\\zz.xlsx&quot;</span><br><span class="line"></span><br><span class="line">data &#x3D; pd.read_excel(path)</span><br><span class="line">df &#x3D; pd.DataFrame(data)</span><br><span class="line"></span><br><span class="line"># Create a Pandas Excel writer using XlsxWriter as the engine.</span><br><span class="line">writer &#x3D; pd.ExcelWriter(path, engine&#x3D;&#39;xlsxwriter&#39;)</span><br><span class="line"></span><br><span class="line"># Convert the dataframe to an XlsxWriter Excel object.这里注意index要设置为false，不然结果会多一列数据</span><br><span class="line">df.to_excel(writer, sheet_name&#x3D;&#39;Sheet1&#39;, index&#x3D;False)</span><br><span class="line"></span><br><span class="line"># Get the xlsxwriter objects from the dataframe writer object.</span><br><span class="line">workbook &#x3D; writer.book</span><br><span class="line">worksheet &#x3D; writer.sheets[&#39;Sheet1&#39;]</span><br><span class="line"></span><br><span class="line"># Add some cell formats.</span><br><span class="line">format1 &#x3D; workbook.add_format(&#123;&quot;font_name&quot;: u&quot;微软雅黑&quot;&#125;)</span><br><span class="line"></span><br><span class="line"># Set the column width and format.</span><br><span class="line">worksheet.set_column(&#39;A:B&#39;, 18, format1)</span><br><span class="line">worksheet.set_column(&#39;C:H&#39;, 21, format1)</span><br><span class="line">df.to_excel(path, sheet_name&#x3D;&quot;Sheet1&quot;, index&#x3D;False, header&#x3D;True)</span><br><span class="line">writer.save()</span><br></pre></td></tr></table></figure>
+<p><img src="2B0BBD5F71594E73B714FC09070CAA97" alt="image">  </p>
+<h3><span id="11-3-1-shi-ji-shi-yong-de-yi-ge-cheng-xu-li-zi">11.3.1 实际使用的一个程序例子</span><a href="#11-3-1-shi-ji-shi-yong-de-yi-ge-cheng-xu-li-zi" class="header-anchor">#</a></h3><p>从数据库中用以下SQL将查询出来的数据写入到EXCEL中，并设置列宽  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">select trim(BOTH &#39;&quot;&#39; FROM json_extract(esi.fdynamic_attribute,&#39;$.f31&#39;)) as &#39;RUN号&#39;,qc.fsample_code as &#39;样本编号&#39;,</span><br><span class="line">ai.fsubmit_time as &#39;提交时间&#39;,ai.fstart_time as &#39;分析开始时间&#39;,ai.ffinish_time as &#39;分析结束时间&#39;,ai.felapsed_time as &#39;运行耗时&#39;,</span><br><span class="line">trim(BOTH &#39;&quot;&#39; FROM json_extract(rinfo.fdynamic_attribute,&#39;$.f50&#39;)) as &#39;审核时间&#39;,trim(BOTH &#39;&quot;&#39; FROM json_extract(rinfo.fdynamic_attribute,&#39;$.f72&#39;)) as &#39;报告时间&#39; from a_info ai</span><br><span class="line">LEFT JOIN e_sequence_detail esd on (ai.fsequence_detail_id&#x3D;esd.fid)</span><br><span class="line">LEFT JOIN e_sequence_info esi on (esi.fid&#x3D;esd.fsequence_id)</span><br><span class="line">LEFT JOIN qc_info qc on (ai.fid&#x3D;qc.finfo_id)</span><br><span class="line">LEFT JOIN r_info rinfo on (rinfo.fqc_id&#x3D;qc.fid)</span><br><span class="line">where trim(BOTH &#39;&quot;&#39; FROM json_extract(esi.fdynamic_attribute,&#39;$.f31&#39;)) &#x3D;&#39;F300000337&#39;;</span><br></pre></td></tr></table></figure>
+<p><img src="4DD67888E2E3402CADED2AFA0AE1761B" alt="image"><br>编写的Python程序：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;evn python</span><br><span class="line">#-*-coding:utf-8-*-</span><br><span class="line">import pandas as pd</span><br><span class="line">import pymysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class Export(object):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.data &#x3D; pd.read_excel(&quot;I:\\download\\zz.xlsx&quot;, sheet_name&#x3D;&quot;Sheet1&quot;)</span><br><span class="line">        self.data[&#39;RUN号&#39;] &#x3D; None</span><br><span class="line">        self.data[&#39;样本编号&#39;] &#x3D; None</span><br><span class="line">        self.data[&#39;提交时间&#39;] &#x3D; None</span><br><span class="line">        self.data[&#39;分析开始时间&#39;] &#x3D; None</span><br><span class="line">        self.data[&#39;分析结束时间&#39;] &#x3D; None</span><br><span class="line">        self.data[&#39;运行耗时&#39;] &#x3D; None</span><br><span class="line">        self.data[&#39;审核时间&#39;] &#x3D; None</span><br><span class="line">        self.data[&#39;报告时间&#39;] &#x3D; None</span><br><span class="line"></span><br><span class="line">    def connect(self):</span><br><span class="line">        db &#x3D;pymysql.connect(&#39;127.0.0.1&#39; ,&#39;root&#39; ,&#39;123456&#39; ,&#39;oncoosplus_zhongzhong&#39; ,use_unicode&#x3D;True, charset&#x3D;&#39;utf8&#39;)</span><br><span class="line">        cursor &#x3D;db.cursor()</span><br><span class="line">        return cursor ,db</span><br><span class="line"></span><br><span class="line">    def getdata(self,runcode):</span><br><span class="line">        cursor,db &#x3D; self.connect()</span><br><span class="line">        sql&#x3D;&#39;&#39;&#39;</span><br><span class="line">        select trim(BOTH &#39;&quot;&#39; FROM json_extract(esi.fdynamic_attribute,&#39;$.f31&#39;)) as &#39;RUN号&#39;,qc.fsample_code as &#39;样本编号&#39;, ai.fsubmit_time as &#39;提交时间&#39;,ai.fstart_time as &#39;分析开始时间&#39;,ai.ffinish_time as &#39;分析结束时间&#39;,ai.felapsed_time as &#39;运行耗时&#39;, trim(BOTH &#39;&quot;&#39; FROM json_extract(rinfo.fdynamic_attribute,&#39;$.f50&#39;)) as &#39;审核时间&#39;,trim(BOTH &#39;&quot;&#39; FROM json_extract(rinfo.fdynamic_attribute,&#39;$.f72&#39;)) as &#39;报告时间&#39; from a_info ai LEFT JOIN e_sequence_detail esd on (ai.fsequence_detail_id&#x3D;esd.fid) LEFT JOIN e_sequence_info esi on (esi.fid&#x3D;esd.fsequence_id) LEFT JOIN qc_info qc on (ai.fid&#x3D;qc.finfo_id) LEFT JOIN r_info rinfo on (rinfo.fqc_id&#x3D;qc.fid) where trim(BOTH &#39;&quot;&#39; FROM json_extract(esi.fdynamic_attribute,&#39;$.f31&#39;)) &#x3D;</span><br><span class="line">        &#39;&#39;&#39;</span><br><span class="line">        cursor.execute(sql+&quot;&#39;&quot;+runcode+&quot;&#39;;&quot;)</span><br><span class="line">        # print(sql+runcode+&quot;&#39;;&quot;)</span><br><span class="line">        # print(cursor.fetchall())</span><br><span class="line">        for i,item in enumerate(cursor.fetchall()):</span><br><span class="line">            self.data.loc[i+1] &#x3D; item ##插入行数据</span><br><span class="line">        df &#x3D; pd.DataFrame(self.data) #.to_excel(&quot;I:\\download\\zz.xlsx&quot;, sheet_name&#x3D;&quot;Sheet1&quot;, index&#x3D;False, header&#x3D;True)</span><br><span class="line">        self.setFormat(df)</span><br><span class="line"></span><br><span class="line">    def setFormat(self,df):</span><br><span class="line">        # df &#x3D; pd.DataFrame(self.data)</span><br><span class="line"></span><br><span class="line">        # Create a Pandas Excel writer using XlsxWriter as the engine.</span><br><span class="line">        writer &#x3D; pd.ExcelWriter(&#39;I:\\download\\zz.xlsx&#39;, engine&#x3D;&#39;xlsxwriter&#39;)</span><br><span class="line"></span><br><span class="line">        # Convert the dataframe to an XlsxWriter Excel object.</span><br><span class="line">        df.to_excel(writer, sheet_name&#x3D;&#39;Sheet1&#39;,index&#x3D;False)</span><br><span class="line"></span><br><span class="line">        # Get the xlsxwriter objects from the dataframe writer object.</span><br><span class="line">        workbook &#x3D; writer.book</span><br><span class="line">        worksheet &#x3D; writer.sheets[&#39;Sheet1&#39;]</span><br><span class="line"></span><br><span class="line">        # Add some cell formats.</span><br><span class="line">        format1 &#x3D; workbook.add_format(&#123;&quot;font_name&quot;: u&quot;微软雅黑&quot;&#125;)</span><br><span class="line"></span><br><span class="line">        # Set the column width and format.</span><br><span class="line">        worksheet.set_column(&#39;A:B&#39;, 18, format1)</span><br><span class="line">        worksheet.set_column(&#39;C:H&#39;, 20, format1)</span><br><span class="line">        df.to_excel(&quot;I:\\download\\zz.xlsx&quot;, sheet_name&#x3D;&quot;Sheet1&quot;, index&#x3D;False, header&#x3D;True)</span><br><span class="line">        writer.save()</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    #创建一个空的Excel</span><br><span class="line">    path&#x3D;&quot;I:\\download\\zz.xlsx&quot;</span><br><span class="line">    df &#x3D; pd.DataFrame()</span><br><span class="line">    df.to_excel(&quot;I:\\download\\zz.xlsx&quot;)</span><br><span class="line">    </span><br><span class="line">    export&#x3D;Export()</span><br><span class="line">    export.getdata(&quot;F300000337&quot;)</span><br></pre></td></tr></table></figure>
+<p>执行结果：<br><img src="46F2BCCE4AF84882BBC42681B673A797" alt="image"></p>
+<blockquote>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html" target="_blank" rel="noopener">pandas官方文档</a><br><a href="https://www.pypandas.cn" target="_blank" rel="noopener">pandas中文文档</a><br><a href="https://blog.csdn.net/xufankang/article/details/83688379" target="_blank" rel="noopener">获取列标签参考博客</a><br><a href="https://www.cnblogs.com/SH170706/p/10568908.html" target="_blank" rel="noopener">pandas基础操作参考博客</a><br><a href="https://www.jianshu.com/p/7df2593a01ce" target="_blank" rel="noopener">excel插入列参考博客</a><br><a href="https://blog.csdn.net/qq_34377830/article/details/81872568" target="_blank" rel="noopener">excel插入列保存参考博客</a><br><a href="https://www.jb51.net/article/174537.htm" target="_blank" rel="noopener">操作列参考博客</a><br><a href="https://blog.csdn.net/guotong1988/article/details/80513879?utm_source=blogxgwz1" target="_blank" rel="noopener">左边多一列参考博客</a><br><a href="https://xlsxwriter.readthedocs.io/working_with_pandas.html" target="_blank" rel="noopener">设置列宽参考官方文档</a><br><a href="https://www.lizenghai.com/archives/37618.html" target="_blank" rel="noopener">设置列宽参考博客</a></p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/02/16/Nginx%E5%9F%BA%E7%A1%80/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Nginx基础
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -323,8 +454,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
