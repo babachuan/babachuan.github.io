@@ -80,17 +80,23 @@
   </entry>
   
   <entry>
-    <title>github</title>
+    <title>git</title>
     <link href="http://yoursite.com/2020/02/16/github/"/>
     <id>http://yoursite.com/2020/02/16/github/</id>
     <published>2020-02-16T04:52:07.000Z</published>
-    <updated>2020-02-16T04:52:07.150Z</updated>
+    <updated>2020-02-23T04:11:57.949Z</updated>
+    
+    <content type="html"><![CDATA[<div class="toc"><!-- toc --><ul><li><a href="#1-git-mian-mi-ma-jin-xing-ti-jiao-pei-zhi-wen-jian">1. git免密码进行提交-配置文件</a><ul><li><a href="#1-1-xu-qiu">1.1 需求</a></li><li><a href="#1-2-mian-mi-ti-jiao-she-zhi">1.2 免密提交设置</a></li></ul></li></ul><!-- tocstop --></div><h1><span id="1-git-mian-mi-ma-jin-xing-ti-jiao-pei-zhi-wen-jian">1. git免密码进行提交-配置文件</span><a href="#1-git-mian-mi-ma-jin-xing-ti-jiao-pei-zhi-wen-jian" class="header-anchor">#</a></h1><h2><span id="1-1-xu-qiu">1.1 需求</span><a href="#1-1-xu-qiu" class="header-anchor">#</a></h2><p>在平时编写文档的过程中，需要经常bash提交代码（可能还有更快捷的方式），本来想自己编写批处理文件进行自动化处理，发现原来git本身就有这样的设计。开始也是百度了各种博客，从config入手，但是总是遇<code>fatal: unable to get credential storage lock: File exists</code>错误，升级了git客户端也不好使，最终找到了可行的解决方法。</p><h2><span id="1-2-mian-mi-ti-jiao-she-zhi">1.2 免密提交设置</span><a href="#1-2-mian-mi-ti-jiao-she-zhi" class="header-anchor">#</a></h2><p>这个设置只针对指定项目，不是全局设置。</p><p>找到项目的.git目录里的config文件，文件的内容如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[core]</span><br><span class="line">repositoryformatversion &#x3D; 0</span><br><span class="line">filemode &#x3D; false</span><br><span class="line">bare &#x3D; false</span><br><span class="line">logallrefupdates &#x3D; true</span><br><span class="line">symlinks &#x3D; false</span><br><span class="line">ignorecase &#x3D; true</span><br><span class="line">[remote &quot;origin&quot;]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;github.com&#x2F;babachuan&#x2F;Spring.git</span><br><span class="line">fetch &#x3D; +refs&#x2F;heads&#x2F;*:refs&#x2F;remotes&#x2F;origin&#x2F;*</span><br><span class="line">[branch &quot;master&quot;]</span><br><span class="line">remote &#x3D; origin</span><br><span class="line">merge &#x3D; refs&#x2F;heads&#x2F;master</span><br><span class="line">[gui]</span><br><span class="line">wmstate &#x3D; normal</span><br><span class="line">geometry &#x3D; 1055x555+128+128 229 251</span><br></pre></td></tr></table></figure><p>只需要在remote的url设置成如下格式即可：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url &#x3D; https:&#x2F;&#x2F;账号名:密码@github.com&#x2F;babachuan&#x2F;Spring.git</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://www.cnblogs.com/weibanggang/p/9447997.html" target="_blank" rel="noopener">参考博客</a></p></blockquote>]]></content>
     
     <summary type="html">
+    
+      Git使用过程总结
     
     </summary>
     
     
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   
