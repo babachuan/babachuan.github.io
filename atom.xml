@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-22T12:57:50.921Z</updated>
+  <updated>2020-02-25T05:36:15.511Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker</title>
+    <link href="http://yoursite.com/2020/02/25/Docker/"/>
+    <id>http://yoursite.com/2020/02/25/Docker/</id>
+    <published>2020-02-25T05:27:52.000Z</published>
+    <updated>2020-02-25T05:36:15.511Z</updated>
+    
+    <content type="html"><![CDATA[<div class="toc"><!-- toc --><ul><li><a href="#1-yi-root-quan-xian-deng-lu-rong-qi">1. 以ROOT权限登录容器</a></li><li><a href="#2-an-zhuang-docker-compose">2. 安装docker-compose</a></li></ul><!-- tocstop --></div><h1><span id="1-yi-root-quan-xian-deng-lu-rong-qi">1. 以ROOT权限登录容器</span><a href="#1-yi-root-quan-xian-deng-lu-rong-qi" class="header-anchor">#</a></h1><p>在登录Docker容器的时候，我们一般使用如下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon Kiwi-8.0]# docker exec -it  c071060a0213 bash</span><br></pre></td></tr></table></figure><p>但是这登录后权限只有普通账户，如果不知道root密码无法进行root切换，其实在进入容器的时候就可以设置root权限，具体命令如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">第一步：查看容器的CONTAINER ID</span><br><span class="line"># docker ps</span><br><span class="line"></span><br><span class="line">第二步：获取root权限，进入Docker容器</span><br><span class="line">docker exec -ti -u root 4650e8d1bcca bash</span><br><span class="line">注意：这里的4650e8d1bcca是指容器的ID.</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://www.cnblogs.com/jifeng/p/10277560.html" target="_blank" rel="noopener">参考博客</a></p></blockquote><h1><span id="2-an-zhuang-docker-compose">2. 安装docker-compose</span><a href="#2-an-zhuang-docker-compose" class="header-anchor">#</a></h1><p>在使用docker-compose命令的时候报错：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: docker-compose: command not found</span><br></pre></td></tr></table></figure><p>是因为没有安装docker-compose导致的。</p><p>安装命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># curl -L https:&#x2F;&#x2F;get.daocloud.io&#x2F;docker&#x2F;compose&#x2F;releases&#x2F;download&#x2F;1.22.0&#x2F;docker-compose-&#96;uname -s&#96;-&#96;uname -m&#96; &gt; &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-compose  &#x2F;&#x2F;下载安装</span><br><span class="line"></span><br><span class="line"># chmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-compose  &#x2F;&#x2F;修改权限</span><br><span class="line"></span><br><span class="line"># docker-compose -version &#x2F;&#x2F;查看是否安装完成</span><br></pre></td></tr></table></figure><p>安装有多种方式，我安装的时候使用了这种方式，是可以使用的。</p><blockquote><p><a href="https://www.cnblogs.com/zuokun/p/11007063.html" target="_blank" rel="noopener">linux 安装 docker-compose</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      Docker使用总结
+    
+    </summary>
+    
+    
+    
+      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux</title>
+    <link href="http://yoursite.com/2020/02/25/Linux/"/>
+    <id>http://yoursite.com/2020/02/25/Linux/</id>
+    <published>2020-02-25T05:19:43.000Z</published>
+    <updated>2020-02-25T05:28:04.884Z</updated>
+    
+    <content type="html"><![CDATA[<div class="toc"><!-- toc --><ul><li><a href="#1-centos8-she-zhi-zhong-wen-zi-fu-ji">1. CentOS8设置中文字符集</a></li><li><a href="#2-cha-kan-linux-ban-ben">2. 查看Linux版本</a></li></ul><!-- tocstop --></div><h1><span id="1-centos8-she-zhi-zhong-wen-zi-fu-ji">1. CentOS8设置中文字符集</span><a href="#1-centos8-she-zhi-zhong-wen-zi-fu-ji" class="header-anchor">#</a></h1><p>在使用Cent8的过程中，不能像设置Cent7的字符集那样进行下载。8的设置方式如下（亲自实践过）:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dnf install glibc-langpack-zh.x86_64  #安装中文支持</span><br><span class="line">echo LANG&#x3D;zh_CN.UTF-8 &gt; &#x2F;etc&#x2F;locale.conf #修改系统的字符集</span><br><span class="line">source &#x2F;etc&#x2F;locale.conf #使立即生效</span><br></pre></td></tr></table></figure><blockquote><p><a href="http://blog.sina.com.cn/s/blog_6da6c1220102z5ds.html" target="_blank" rel="noopener">参考博客CentOS8中文支持</a></p></blockquote><h1><span id="2-cha-kan-linux-ban-ben">2. 查看Linux版本</span><a href="#2-cha-kan-linux-ban-ben" class="header-anchor">#</a></h1><p>对于RedHat版本的linux,可以使用如下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># cat &#x2F;etc&#x2F;redhat-release</span><br></pre></td></tr></table></figure><p>结果：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@c071060a0213 &#x2F;]# cat &#x2F;etc&#x2F;redhat-release</span><br><span class="line">CentOS Linux release 8.1.1911 (Core)</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://blog.csdn.net/szr4630/article/details/79613267" target="_blank" rel="noopener">参考博客</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      Linux操作系统使用总结
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring</title>
@@ -84,9 +126,9 @@
     <link href="http://yoursite.com/2020/02/16/github/"/>
     <id>http://yoursite.com/2020/02/16/github/</id>
     <published>2020-02-16T04:52:07.000Z</published>
-    <updated>2020-02-23T04:11:57.949Z</updated>
+    <updated>2020-02-23T08:15:25.078Z</updated>
     
-    <content type="html"><![CDATA[<div class="toc"><!-- toc --><ul><li><a href="#1-git-mian-mi-ma-jin-xing-ti-jiao-pei-zhi-wen-jian">1. git免密码进行提交-配置文件</a><ul><li><a href="#1-1-xu-qiu">1.1 需求</a></li><li><a href="#1-2-mian-mi-ti-jiao-she-zhi">1.2 免密提交设置</a></li></ul></li></ul><!-- tocstop --></div><h1><span id="1-git-mian-mi-ma-jin-xing-ti-jiao-pei-zhi-wen-jian">1. git免密码进行提交-配置文件</span><a href="#1-git-mian-mi-ma-jin-xing-ti-jiao-pei-zhi-wen-jian" class="header-anchor">#</a></h1><h2><span id="1-1-xu-qiu">1.1 需求</span><a href="#1-1-xu-qiu" class="header-anchor">#</a></h2><p>在平时编写文档的过程中，需要经常bash提交代码（可能还有更快捷的方式），本来想自己编写批处理文件进行自动化处理，发现原来git本身就有这样的设计。开始也是百度了各种博客，从config入手，但是总是遇<code>fatal: unable to get credential storage lock: File exists</code>错误，升级了git客户端也不好使，最终找到了可行的解决方法。</p><h2><span id="1-2-mian-mi-ti-jiao-she-zhi">1.2 免密提交设置</span><a href="#1-2-mian-mi-ti-jiao-she-zhi" class="header-anchor">#</a></h2><p>这个设置只针对指定项目，不是全局设置。</p><p>找到项目的.git目录里的config文件，文件的内容如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[core]</span><br><span class="line">repositoryformatversion &#x3D; 0</span><br><span class="line">filemode &#x3D; false</span><br><span class="line">bare &#x3D; false</span><br><span class="line">logallrefupdates &#x3D; true</span><br><span class="line">symlinks &#x3D; false</span><br><span class="line">ignorecase &#x3D; true</span><br><span class="line">[remote &quot;origin&quot;]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;github.com&#x2F;babachuan&#x2F;Spring.git</span><br><span class="line">fetch &#x3D; +refs&#x2F;heads&#x2F;*:refs&#x2F;remotes&#x2F;origin&#x2F;*</span><br><span class="line">[branch &quot;master&quot;]</span><br><span class="line">remote &#x3D; origin</span><br><span class="line">merge &#x3D; refs&#x2F;heads&#x2F;master</span><br><span class="line">[gui]</span><br><span class="line">wmstate &#x3D; normal</span><br><span class="line">geometry &#x3D; 1055x555+128+128 229 251</span><br></pre></td></tr></table></figure><p>只需要在remote的url设置成如下格式即可：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url &#x3D; https:&#x2F;&#x2F;账号名:密码@github.com&#x2F;babachuan&#x2F;Spring.git</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://www.cnblogs.com/weibanggang/p/9447997.html" target="_blank" rel="noopener">参考博客</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<div class="toc"><!-- toc --><ul><li><a href="#1-git-mian-mi-ma-jin-xing-ti-jiao-pei-zhi-wen-jian">1. git免密码进行提交-配置文件</a><ul><li><a href="#1-1-xu-qiu">1.1 需求</a></li><li><a href="#1-2-mian-mi-ti-jiao-she-zhi">1.2 免密提交设置</a></li></ul></li><li><a href="#2-dui-github-bian-xie-de-markdown-wen-jian-zi-dong-sheng-cheng-mu-lu">2. 对Github编写的Markdown文件自动生成目录</a></li></ul><!-- tocstop --></div><h1><span id="1-git-mian-mi-ma-jin-xing-ti-jiao-pei-zhi-wen-jian">1. git免密码进行提交-配置文件</span><a href="#1-git-mian-mi-ma-jin-xing-ti-jiao-pei-zhi-wen-jian" class="header-anchor">#</a></h1><h2><span id="1-1-xu-qiu">1.1 需求</span><a href="#1-1-xu-qiu" class="header-anchor">#</a></h2><p>在平时编写文档的过程中，需要经常bash提交代码（可能还有更快捷的方式），本来想自己编写批处理文件进行自动化处理，发现原来git本身就有这样的设计。开始也是百度了各种博客，从config入手，但是总是遇<code>fatal: unable to get credential storage lock: File exists</code>错误，升级了git客户端也不好使，最终找到了可行的解决方法。</p><h2><span id="1-2-mian-mi-ti-jiao-she-zhi">1.2 免密提交设置</span><a href="#1-2-mian-mi-ti-jiao-she-zhi" class="header-anchor">#</a></h2><p>这个设置只针对指定项目，不是全局设置。</p><p>找到项目的.git目录里的config文件，文件的内容如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[core]</span><br><span class="line">repositoryformatversion &#x3D; 0</span><br><span class="line">filemode &#x3D; false</span><br><span class="line">bare &#x3D; false</span><br><span class="line">logallrefupdates &#x3D; true</span><br><span class="line">symlinks &#x3D; false</span><br><span class="line">ignorecase &#x3D; true</span><br><span class="line">[remote &quot;origin&quot;]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;github.com&#x2F;babachuan&#x2F;Spring.git</span><br><span class="line">fetch &#x3D; +refs&#x2F;heads&#x2F;*:refs&#x2F;remotes&#x2F;origin&#x2F;*</span><br><span class="line">[branch &quot;master&quot;]</span><br><span class="line">remote &#x3D; origin</span><br><span class="line">merge &#x3D; refs&#x2F;heads&#x2F;master</span><br><span class="line">[gui]</span><br><span class="line">wmstate &#x3D; normal</span><br><span class="line">geometry &#x3D; 1055x555+128+128 229 251</span><br></pre></td></tr></table></figure><p>只需要在remote的url设置成如下格式即可：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url &#x3D; https:&#x2F;&#x2F;账号名:密码@github.com&#x2F;babachuan&#x2F;Spring.git</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://www.cnblogs.com/weibanggang/p/9447997.html" target="_blank" rel="noopener">参考博客</a></p></blockquote><h1><span id="2-dui-github-bian-xie-de-markdown-wen-jian-zi-dong-sheng-cheng-mu-lu">2. 对Github编写的Markdown文件自动生成目录</span><a href="#2-dui-github-bian-xie-de-markdown-wen-jian-zi-dong-sheng-cheng-mu-lu" class="header-anchor">#</a></h1><p>平时在编写README.md的时候，使用toc标签并不能在github上自动生成目录，在网上找了一篇帖子，用python目录自动生成</p>]]></content>
     
     <summary type="html">
     
