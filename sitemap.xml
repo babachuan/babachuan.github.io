@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/02/25/Docker/</loc>
-    
-    <lastmod>2020-02-25T10:30:35.272Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2020/02/25/Linux/</loc>
     
-    <lastmod>2020-02-25T05:28:04.884Z</lastmod>
+    <lastmod>2020-03-03T06:41:42.923Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/02/16/github/</loc>
     
-    <lastmod>2020-02-23T08:15:25.078Z</lastmod>
+    <lastmod>2020-02-26T06:05:50.174Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker/</loc>
+    
+    <lastmod>2020-02-25T10:30:35.272Z</lastmod>
     
   </url>
   
