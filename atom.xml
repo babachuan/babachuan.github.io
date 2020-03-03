@@ -5,9 +5,9 @@
   <subtitle>学习笔记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://babachuan.github.io/"/>
   <updated>2020-02-25T10:30:35.272Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://babachuan.github.io/</id>
   
   <author>
     <name>屈海川</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Docker</title>
-    <link href="http://yoursite.com/2020/02/25/Docker/"/>
-    <id>http://yoursite.com/2020/02/25/Docker/</id>
+    <link href="https://babachuan.github.io/2020/02/25/Docker/"/>
+    <id>https://babachuan.github.io/2020/02/25/Docker/</id>
     <published>2020-02-25T05:27:52.000Z</published>
     <updated>2020-02-25T10:30:35.272Z</updated>
     
@@ -33,14 +33,14 @@
     
     
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="https://babachuan.github.io/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Linux</title>
-    <link href="http://yoursite.com/2020/02/25/Linux/"/>
-    <id>http://yoursite.com/2020/02/25/Linux/</id>
+    <link href="https://babachuan.github.io/2020/02/25/Linux/"/>
+    <id>https://babachuan.github.io/2020/02/25/Linux/</id>
     <published>2020-02-25T05:19:43.000Z</published>
     <updated>2020-03-03T06:41:42.923Z</updated>
     
@@ -54,14 +54,14 @@
     
     
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="https://babachuan.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Spring</title>
-    <link href="http://yoursite.com/2020/02/22/spring/"/>
-    <id>http://yoursite.com/2020/02/22/spring/</id>
+    <link href="https://babachuan.github.io/2020/02/22/spring/"/>
+    <id>https://babachuan.github.io/2020/02/22/spring/</id>
     <published>2020-02-22T04:51:25.000Z</published>
     <updated>2020-02-22T12:57:50.921Z</updated>
     
@@ -75,14 +75,14 @@
     
     
     
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+      <category term="Spring" scheme="https://babachuan.github.io/tags/Spring/"/>
     
   </entry>
   
   <entry>
     <title>mysql</title>
-    <link href="http://yoursite.com/2020/02/18/mysql/"/>
-    <id>http://yoursite.com/2020/02/18/mysql/</id>
+    <link href="https://babachuan.github.io/2020/02/18/mysql/"/>
+    <id>https://babachuan.github.io/2020/02/18/mysql/</id>
     <published>2020-02-18T04:49:01.000Z</published>
     <updated>2020-02-19T07:54:44.949Z</updated>
     
@@ -96,14 +96,14 @@
     
     
     
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+      <category term="MySQL" scheme="https://babachuan.github.io/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>测试理论</title>
-    <link href="http://yoursite.com/2020/02/16/%E6%B5%8B%E8%AF%95%E7%90%86%E8%AE%BA/"/>
-    <id>http://yoursite.com/2020/02/16/%E6%B5%8B%E8%AF%95%E7%90%86%E8%AE%BA/</id>
+    <link href="https://babachuan.github.io/2020/02/16/%E6%B5%8B%E8%AF%95%E7%90%86%E8%AE%BA/"/>
+    <id>https://babachuan.github.io/2020/02/16/%E6%B5%8B%E8%AF%95%E7%90%86%E8%AE%BA/</id>
     <published>2020-02-16T04:52:20.000Z</published>
     <updated>2020-02-16T05:25:19.090Z</updated>
     
@@ -117,14 +117,14 @@
     
     
     
-      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="https://babachuan.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>git</title>
-    <link href="http://yoursite.com/2020/02/16/github/"/>
-    <id>http://yoursite.com/2020/02/16/github/</id>
+    <link href="https://babachuan.github.io/2020/02/16/github/"/>
+    <id>https://babachuan.github.io/2020/02/16/github/</id>
     <published>2020-02-16T04:52:07.000Z</published>
     <updated>2020-02-26T06:05:50.174Z</updated>
     
@@ -138,14 +138,14 @@
     
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+      <category term="Git" scheme="https://babachuan.github.io/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>FastDFS</title>
-    <link href="http://yoursite.com/2020/02/16/FastDFS/"/>
-    <id>http://yoursite.com/2020/02/16/FastDFS/</id>
+    <link href="https://babachuan.github.io/2020/02/16/FastDFS/"/>
+    <id>https://babachuan.github.io/2020/02/16/FastDFS/</id>
     <published>2020-02-16T04:51:55.000Z</published>
     <updated>2020-02-16T04:51:55.371Z</updated>
     
@@ -159,8 +159,8 @@
   
   <entry>
     <title>activeMQ</title>
-    <link href="http://yoursite.com/2020/02/16/activeMQ/"/>
-    <id>http://yoursite.com/2020/02/16/activeMQ/</id>
+    <link href="https://babachuan.github.io/2020/02/16/activeMQ/"/>
+    <id>https://babachuan.github.io/2020/02/16/activeMQ/</id>
     <published>2020-02-16T04:51:42.000Z</published>
     <updated>2020-02-16T04:51:42.398Z</updated>
     
@@ -174,8 +174,8 @@
   
   <entry>
     <title>mongodb</title>
-    <link href="http://yoursite.com/2020/02/16/mongodb/"/>
-    <id>http://yoursite.com/2020/02/16/mongodb/</id>
+    <link href="https://babachuan.github.io/2020/02/16/mongodb/"/>
+    <id>https://babachuan.github.io/2020/02/16/mongodb/</id>
     <published>2020-02-16T04:49:14.000Z</published>
     <updated>2020-02-20T08:53:32.231Z</updated>
     
@@ -197,8 +197,8 @@
   
   <entry>
     <title>springcloud</title>
-    <link href="http://yoursite.com/2020/02/16/springcloud/"/>
-    <id>http://yoursite.com/2020/02/16/springcloud/</id>
+    <link href="https://babachuan.github.io/2020/02/16/springcloud/"/>
+    <id>https://babachuan.github.io/2020/02/16/springcloud/</id>
     <published>2020-02-16T04:48:50.000Z</published>
     <updated>2020-02-16T04:48:50.288Z</updated>
     
@@ -212,8 +212,8 @@
   
   <entry>
     <title>java基础</title>
-    <link href="http://yoursite.com/2020/02/16/java%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2020/02/16/java%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://babachuan.github.io/2020/02/16/java%E5%9F%BA%E7%A1%80/"/>
+    <id>https://babachuan.github.io/2020/02/16/java%E5%9F%BA%E7%A1%80/</id>
     <published>2020-02-16T04:48:36.000Z</published>
     <updated>2020-02-16T04:48:36.892Z</updated>
     
@@ -227,8 +227,8 @@
   
   <entry>
     <title>python</title>
-    <link href="http://yoursite.com/2020/02/16/python/"/>
-    <id>http://yoursite.com/2020/02/16/python/</id>
+    <link href="https://babachuan.github.io/2020/02/16/python/"/>
+    <id>https://babachuan.github.io/2020/02/16/python/</id>
     <published>2020-02-16T04:46:25.000Z</published>
     <updated>2020-02-16T04:47:26.637Z</updated>
     
@@ -251,8 +251,8 @@
   
   <entry>
     <title>Pandas基础</title>
-    <link href="http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://babachuan.github.io/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"/>
+    <id>https://babachuan.github.io/2020/02/15/Pandas%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</id>
     <published>2020-02-15T14:35:26.195Z</published>
     <updated>2020-02-19T12:47:36.344Z</updated>
     
@@ -274,10 +274,10 @@
     </summary>
     
     
-      <category term="Python库" scheme="http://yoursite.com/categories/Python%E5%BA%93/"/>
+      <category term="Python库" scheme="https://babachuan.github.io/categories/Python%E5%BA%93/"/>
     
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+      <category term="Python" scheme="https://babachuan.github.io/tags/Python/"/>
     
   </entry>
   
