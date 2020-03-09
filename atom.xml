@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://babachuan.github.io/"/>
-  <updated>2020-03-04T06:56:56.426Z</updated>
+  <updated>2020-03-09T11:24:07.991Z</updated>
   <id>https://babachuan.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>springboot</title>
+    <link href="https://babachuan.github.io/2020/03/09/springboot/"/>
+    <id>https://babachuan.github.io/2020/03/09/springboot/</id>
+    <published>2020-03-09T10:47:50.000Z</published>
+    <updated>2020-03-09T11:24:07.991Z</updated>
+    
+    <content type="html"><![CDATA[<div class="toc"><!-- toc --><ul><li><a href="#1-she-zhi-springboot-de-qi-dong-banner">1.设置springboot的启动banner</a></li><li><a href="#2-springboot-re-bu-shu-zhi-jrebel">2.SpringBoot热部署之-JRebel</a></li></ul><!-- tocstop --></div><h1><span id="1-she-zhi-springboot-de-qi-dong-banner">1.设置springboot的启动banner</span><a href="#1-she-zhi-springboot-de-qi-dong-banner" class="header-anchor">#</a></h1><p>step1:首先新建一个springboot项目</p><p>step2:在resources目录下新建banner.txt</p><p>然后将对应的banner写入到banner.txt即可，是不是如此简单，可以任意自定义banner,下面推荐两个常用的生成工具网址。</p><p><code>http://www.network-science.de/ascii/</code> 英文</p><p><code>https://www.degraeve.com/img2txt.php</code> 图片</p><h1><span id="2-springboot-re-bu-shu-zhi-jrebel">2.SpringBoot热部署之-JRebel</span><a href="#2-springboot-re-bu-shu-zhi-jrebel" class="header-anchor">#</a></h1><p> JRebel 是一款热部署插件。 写的过程中我们需要不断调试，如果没有热部署，则我们每修改一次项目要重启一次，验证问题有没有得到解决。如果项目很小，启动只要几秒或十几秒，可能感觉影响不是很大；但当项目变大了，重启一次需要几十秒，几分钟，甚至十几分钟，每次修改后都需要重启无疑会严重影响我们的工作效率。       正常情况下，我们使用IDEA（或Eclipse等IDE)+tomcat部署web项目时，如果只是修改web页面，按Ctrl+shift+F9（Eclipse按Ctrl+S即可)重新编译，无须重新启动，即可使修改的代码生效，这对我们的开发调试有了很大的帮助。但当我们在java文件中增加方法，增加变量，修改配置文件等大部分操作时，都需要重启服务器，而jrebel使绝大部分操作都不需要重启，只要重新编译即可将更新部署到服务器上，大大节省了我们工作花在重启服务器上的时间。</p><p><strong>安装</strong></p><p>File-&gt;Setting..-&gt;Plugins-&gt;输入JRebel-&gt;选择<code>JReble and XRebel for IntelliJ</code>安装，然后重启。（我的IDEA是2019.3版本）</p><p><strong>配置</strong></p><p>配置的方法其实很简单，JRebel自带了Setup Guide,按照说明过程操作即可，配置还是比较方便，Setup Guide如下图：（激活教程有很多，可自行网上百度）</p><p><img src="https://note.youdao.com/yws/public/resource/0a49b1f56516fdfb475347d978e25fb3/xmlnote/9D2585CFC66F45928E6EBE800BE514D8/14369" alt="配置过程"></p><blockquote><p><a href="https://blog.csdn.net/cms18374672699/article/details/87899869" target="_blank" rel="noopener">激活教程参考博客</a> </p><p><a href="https://my.oschina.net/u/3211737/blog/3098204" target="_blank" rel="noopener">激活教程参考博客2</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。通过这种方式，Spring Boot致力于在蓬勃发展的快速应用开发领域(rapid application development)成为领导者。
+    
+    </summary>
+    
+    
+    
+      <category term="SpringBoot" scheme="https://babachuan.github.io/tags/SpringBoot/"/>
+    
+  </entry>
   
   <entry>
     <title>IDEA工具</title>
