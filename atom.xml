@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://babachuan.github.io/"/>
-  <updated>2020-03-14T03:55:35.940Z</updated>
+  <updated>2020-03-15T02:41:41.492Z</updated>
   <id>https://babachuan.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mybatis</title>
+    <link href="https://babachuan.github.io/2020/03/15/Mybatis/"/>
+    <id>https://babachuan.github.io/2020/03/15/Mybatis/</id>
+    <published>2020-03-15T02:35:38.000Z</published>
+    <updated>2020-03-15T02:41:41.492Z</updated>
+    
+    <content type="html"><![CDATA[<div class="toc"><!-- toc --><ul><li><a href="#1-org-apache-ibatis-binding-bindingexception-invalid-bound-statement-bao-cuo-chu-li">1.org.apache.ibatis.binding.BindingException: Invalid bound statement报错处理</a></li></ul><!-- tocstop --></div><h1><span id="1-org-apache-ibatis-binding-bindingexception-invalid-bound-statement-bao-cuo-chu-li">1.org.apache.ibatis.binding.BindingException: Invalid bound statement报错处理</span><a href="#1-org-apache-ibatis-binding-bindingexception-invalid-bound-statement-bao-cuo-chu-li" class="header-anchor">#</a></h1><p>使用springboot集成mybatis，在接口和映射文件都写好后执行查询报错。</p><p><strong>接口文件</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">package com.qhc.springboot2.dao;</span><br><span class="line"></span><br><span class="line">import com.qhc.springboot2.beans.User;</span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">public interface UserDao &#123;</span><br><span class="line">    User queryById(int id);</span><br><span class="line"></span><br><span class="line">    List&lt;User&gt; getAll();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>mybatis映射文件UserMapping.xml</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper PUBLIC &quot;-&#x2F;&#x2F;mybatis.org&#x2F;&#x2F;DTD Mapper 3.0&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;mybatis.org&#x2F;dtd&#x2F;mybatis-3-mapper.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;mapper namespace&#x3D;&quot;com.qhc.springboot2.dao&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;resultMap id&#x3D;&quot;BaseResultMap&quot; type&#x3D;&quot;com.qhc.springboot2.beans.User&quot;&gt;</span><br><span class="line">        &lt;result column&#x3D;&quot;id&quot; jdbcType&#x3D;&quot;INTEGER&quot; property&#x3D;&quot;id&quot; &#x2F;&gt;</span><br><span class="line">        &lt;result column&#x3D;&quot;userName&quot; jdbcType&#x3D;&quot;VARCHAR&quot; property&#x3D;&quot;userName&quot; &#x2F;&gt;</span><br><span class="line">        &lt;result column&#x3D;&quot;passWord&quot; jdbcType&#x3D;&quot;VARCHAR&quot; property&#x3D;&quot;passWord&quot; &#x2F;&gt;</span><br><span class="line">        &lt;result column&#x3D;&quot;realName&quot; jdbcType&#x3D;&quot;VARCHAR&quot; property&#x3D;&quot;realName&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;resultMap&gt;</span><br><span class="line"></span><br><span class="line">    &lt;select id&#x3D;&quot;queryById&quot; resultMap&#x3D;&quot;BaseResultMap&quot;&gt;</span><br><span class="line">        select * from user where id &#x3D; #&#123;id&#125;</span><br><span class="line">    &lt;&#x2F;select&gt;</span><br><span class="line"></span><br><span class="line">    &lt;select id&#x3D;&quot;getAll&quot; resultMap&#x3D;&quot;BaseResultMap&quot;&gt;</span><br><span class="line">        select * from user</span><br><span class="line">    &lt;&#x2F;select&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;mapper&gt;</span><br></pre></td></tr></table></figure><p>注意：我上面写的namespace是<code>&lt;mapper namespace=&quot;com.qhc.springboot2.dao&quot;&gt;</code>这写法不能对应到指定的接口文件，就会报错：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.apache.ibatis.binding.BindingException: Invalid bound statement (not found)</span><br></pre></td></tr></table></figure><p><strong>修改方法</strong></p><p>将映射文件中namespace修改为<code>com.qhc.springboot2.dao.UserDao</code>问题即可解决。</p>]]></content>
+    
+    <summary type="html">
+    
+      MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生信息，将接口和 Java 的 POJOs(Plain Ordinary Java Object,普通的 Java对象)映射成数据库中的记录。
+    
+    </summary>
+    
+    
+    
+      <category term="Mybatis" scheme="https://babachuan.github.io/tags/Mybatis/"/>
+    
+  </entry>
   
   <entry>
     <title>other</title>
