@@ -318,22 +318,23 @@
     <link href="https://babachuan.github.io/2020/02/16/python/"/>
     <id>https://babachuan.github.io/2020/02/16/python/</id>
     <published>2020-02-16T04:46:25.000Z</published>
-    <updated>2020-02-16T04:47:26.637Z</updated>
+    <updated>2020-03-18T05:19:12.541Z</updated>
     
-    <content type="html"><![CDATA[<p>[toc]</p><h1><span id="1-jian-jie">1.简介</span><a href="#1-jian-jie" class="header-anchor">#</a></h1><p>python简介</p><h1><span id="2-python-an-zhuang">2.Python安装</span><a href="#2-python-an-zhuang" class="header-anchor">#</a></h1><p>安装Python</p>]]></content>
+    <content type="html"><![CDATA[<p>[toc]</p><h1><span id="1-unicodedecodeerror-bao-cuo">1.UnicodeDecodeError报错</span><a href="#1-unicodedecodeerror-bao-cuo" class="header-anchor">#</a></h1><p>在本地win上使用python3调试的程序放到linux 的python2上运行报错</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xe8 in position</span><br></pre></td></tr></table></figure><p>经过搜索，发现应该是因为python2.x的默认编码是ascii，而代码中可能由utf-8的字符导致，解决方法是设置utf-8。</p><p>解决方案</p><p>找到出错的文件，在import后增加下面几行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">if sys.getdefaultencoding() !&#x3D; &#39;utf-8&#39;:</span><br><span class="line">    reload(sys)</span><br><span class="line">    sys.setdefaultencoding(&#39;utf-8&#39;)</span><br></pre></td></tr></table></figure><p>或者</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">reload(sys)</span><br><span class="line">sys.setdefaultencoding(&#39;utf8&#39;)</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;[toc]&lt;/p&gt;
-&lt;h1&gt;&lt;span id=&quot;1-jian-jie&quot;&gt;1.简介&lt;/span&gt;&lt;a href=&quot;#1-jian-jie&quot; class=&quot;header-anchor&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;python简介&lt;/p&gt;
-&lt;h1&gt;&lt;span id=&quot;2-pyth
+&lt;h1&gt;&lt;span id=&quot;1-unicodedecodeerror-bao-cuo&quot;&gt;1.UnicodeDecodeError报错&lt;/span&gt;&lt;a href=&quot;#1-unicodedecodeerror-bao-cuo&quot; class=&quot;header-
       
     
     </summary>
     
     
+    
+      <category term="python" scheme="https://babachuan.github.io/tags/python/"/>
     
   </entry>
   
