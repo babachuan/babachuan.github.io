@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://babachuan.github.io/2020/02/16/java%E5%9F%BA%E7%A1%80/</loc>
+    
+    <lastmod>2020-04-16T02:43:40.724Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://babachuan.github.io/2020/02/18/mysql/</loc>
     
     <lastmod>2020-03-30T02:39:27.601Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>https://babachuan.github.io/2020/02/16/springcloud/</loc>
     
     <lastmod>2020-02-16T04:48:50.288Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://babachuan.github.io/2020/02/16/java%E5%9F%BA%E7%A1%80/</loc>
-    
-    <lastmod>2020-02-16T04:48:36.892Z</lastmod>
     
   </url>
   
